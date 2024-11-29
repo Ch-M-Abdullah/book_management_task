@@ -1,0 +1,6 @@
+<div class="navbar-container" style="display: flex; border-bottom: 1px solid black; margin-bottom: 1rem;">
+  <p style="font-size: 2.5rem; margin: 1rem; flex: 1; display:flex"><strong>Book Manager</strong></p>
+  <%if defined?(button_text) && defined?(location)%>
+      <%= button_to button_text, location, id:"add-book-button", method: (defined?(req_method) ? req_method : :get) %>
+  <%end%>
+</div>

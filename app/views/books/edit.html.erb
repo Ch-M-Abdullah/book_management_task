@@ -1,0 +1,10 @@
+<% content_for :title, "Editing book" %>
+
+
+<%= render "form", book: @book %>
+
+<br>
+
+  <%= link_to "Show this book", @book, style: "position:fixed; background-color: rgb(0, 76, 255); bottom: 5%; right: 1%; text-decoration: none; padding: 1%; border-radius: 5%; color: white" %>
+
+<%= link_to "\u2190 Go Back", books_path, id:"back-to-books-btn" %>

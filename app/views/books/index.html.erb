@@ -1,0 +1,19 @@
+<%= render "navbar", button_text:"Add a Book", location: new_book_path %>
+  <%= form_with url: books_path, method: :get, id:"book-search-container" do%>
+    <%= text_field_tag :query, params[:query], placeholder: "Enter Book Name...", id:"book-search-field"  %>
+    <%= submit_tag "search &#128269;".html_safe, id:"book-search-submit" %>
+  <%end%>
+
+
+
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Books" %>
+
+
+<div id="books">
+  <% @books.each do |book| %>
+    <%= render book, book: book %>
+    
+  <% end %>
+</div>

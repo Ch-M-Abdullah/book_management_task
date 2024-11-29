@@ -1,0 +1,14 @@
+<%= render "navbar", button_text: "Delete Book", location: @book, req_method: :delete %>
+
+<p style="color: green"><%= notice %></p>
+
+
+
+
+<div style="display: flex; justify-content:center; align-items:center;">
+  <%= render @book %>
+</div>
+
+
+<%= link_to "\u2190 Go Back", books_path, id:"back-to-books-btn" %>
+<%= link_to "Edit Book", edit_book_path, id:"edit-books-btn"%>

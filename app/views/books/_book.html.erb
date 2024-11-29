@@ -1,0 +1,24 @@
+<%= link_to book, class: "book-container" do %> 
+
+<div id="<%= dom_id book %>" class="book-info" data-link="<%book_path(book)%>">
+  <p class="book-name">
+    <%= book.name %>
+  </p>
+
+  <p class="book-description">
+    <%= book.description %>
+  </p>
+
+  <p class="book-author">
+    <%= book.author %>
+  </p>
+
+  <p class="book-publish-date">
+    <%= book.publish_date %>
+  </p>
+
+
+</div>
+
+
+<%end%>
